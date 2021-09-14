@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode=ios class="new-background-color">
+ 
+    <ion-title>
+      Sign up
+    </ion-title>
+
+ <!-- Side menu button -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false" class="my-side-menu"></ion-menu-button>
+    </ion-buttons>
+
+
+
+  </ion-toolbar>
+</ion-header>
+
+ 
+
+<ion-content>
+ 
+<ion-card style="border-radius: 10px 10px 10px 10px;">
+
+
+  <form  #form="ngForm" (ngSubmit)="register(form)">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3>Create your account!</h3>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-input  name="fname" type="text" placeholder="First Name" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input  name="Lname" type="text" placeholder="Last Name" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="email" type="Address" placeholder="Address" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="phone" type="phone" placeholder="Phone" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="confirm" type="password" placeholder="Confirm Password" ngModel required></ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <ion-button  size="large" type="submit" [disabled]="form.invalid" expand="block" [routerLink]="['/detail']">Register</ion-button>
+          </div>
+
+        </ion-col>
+
+      </ion-row>
+
+    </ion-grid>
+  </form>
+
+
+
+
+</ion-card>
+
+
+
+
+</ion-content>
+

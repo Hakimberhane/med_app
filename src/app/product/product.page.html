@@ -1,0 +1,80 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode=ios class="new-background-color">
+ 
+    <ion-title>
+      Product Detail 
+    </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/" color="light"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-grid>
+
+     <ion-row>
+        <ion-col size="8" class="ion-container">
+        <ion-img style="width:100px; height:140px" src={{product.url}}></ion-img>
+        <ion-label style="margin-left:10px">
+            <h2 class="name-label">{{product.name}} </h2>
+            <h3>{{product.description}}</h3>
+            <h3>{{product.company}}</h3>
+            <h3>Uinit Price : <span style="color:red">${{product.price}}</span></h3>
+        </ion-label>
+        
+        </ion-col>
+        <ion-col class="ion-container">
+
+        </ion-col>
+        <ion-col>
+
+
+        </ion-col>
+
+     </ion-row>
+ 
+     <ion-row style="height:25px">
+        <ion-col>
+                <ion-label style="margin-left:5px">Quantity :</ion-label>
+                <ion-label style="margin-left:5px">{{quantity}}</ion-label>
+
+        </ion-col>
+     </ion-row>
+     <ion-row style="height:25px">
+        <ion-col>
+                <ion-label style="margin-left:5px">Total Price :</ion-label>
+                <ion-label style="margin-left:5px;color:red">${{quantity * product.price}}</ion-label>
+
+        </ion-col>
+     </ion-row>
+     <ion-row>
+        <ion-col class="ion-container" size="4" style="margin:0px;margin:0px">
+
+
+	<ion-button (click)="ngDecrease()">-</ion-button>
+	<ion-input type="number" id="qty_B_19433" class="qtyinput" name="amount" maxlength="11" size="5" onchange="javascript: return check_quantity(19433, '');" value={{quantity}} [(ngModel)]="quantity"></ion-input>
+
+	<ion-button (click)="ngIncrease()"> +</ion-button>
+     </ion-col>
+
+    <ion-col>
+
+        <div class="div-center">
+                <ion-button (click)='goToCartPage(product)'>Add to Cart</ion-button>
+        </div>
+
+    </ion-col>
+
+
+
+   </ion-row>
+
+    </ion-grid>
+  </ion-card>
+
+</ion-content>

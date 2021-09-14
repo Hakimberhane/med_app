@@ -1,0 +1,55 @@
+ion-content{
+    --ion-background-color:#f8f9fa;
+}
+
+.new-background-color{
+     color:white;
+    --background: #54d61c;
+}
+ion-toolbar{
+  --min-height:55px!important;
+}
+
+ion-card{
+     box-shadow: 1px 1px 0px 0px rgba(0, 0, 255, .2);
+     border: black;
+     background-color: white;
+     border-radius: 10px;
+     padding:15px;
+     border: 0.5px solid lightgrey !important;
+}
+
+.cart-btn {
+   position: relative;
+   color:black;
+   right:20px;
+}
+
+.cart-badge {
+   background-color: red;
+   position: absolute;
+   top: 8px;
+   right:-15px;
+   border-radius: 100%;
+
+}
+
+.container {
+    padding-left:30px;
+    padding-right:30px;
+}
+.mail-custom  {
+      margin-top:10px;
+      margin-left:5px;
+}
+.namestyle {
+  text-align:center;
+  font-weight:700;
+  font-size:14px;
+  color:#000039;
+}
+
+.mycss {
+	--background:linear-gradient(90deg, rgba(43,90,148,1) 0%, rgba(45, 111,229,1) 35%, rgba(45,112,229,1) 100%);
+	--ion-background-color:#f8f9fa;
+}

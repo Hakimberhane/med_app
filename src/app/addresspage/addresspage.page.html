@@ -1,0 +1,130 @@
+<ion-header [translucent]="true" class="ion-no-border">
+
+  <ion-toolbar mode=ios class="new-background-color">
+
+     <ion-title>
+      My Account
+    </ion-title>
+
+<!-- Side menu button -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false" class="my-side-menu"></ion-menu-button>
+    </ion-buttons>
+
+       <ion-buttons slot="end" class="cart-btn">
+                <ion-icon size="large" name="cart-outline"></ion-icon>
+                <ion-badge class="cart-badge"color="primary">11</ion-badge> 
+        </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content>
+
+
+<ion-card>
+
+
+ <ion-item lines="none" ion-text-center> 
+
+   <ion-label>
+     <div style="display:flex; justify-content:center">
+       <ion-avatar slot="start" class="avator-position">
+         <img src="assets/icon/person1.jpg">
+       </ion-avatar>
+     </div>
+    <div style="display:flex; justify-content:center">
+    <ion-label>
+      <h3  class="namestyle">Hakim Berhane</h3>
+      <h3 style="color:lightgrey;text-align:center">Hakimberhane@gmail.com</h3>
+      <h3 style="text-align:center;color:lightgrey"> Phone:<span>0940290240  </span></h3>
+       <p style="color:blue;text-align:center" (click)="editprofilemodal()" >Edit</p>
+     </ion-label>
+     </div>
+   </ion-label>
+  </ion-item>
+</ion-card>
+
+
+<h5 style="padding-left:10px"> Residence & Mailing Addresses </h5>
+<ion-card>
+
+  <ion-icon name="location-outline" color="primary" style="height:30px; width:30px;display:flex;position:absolute"></ion-icon>
+ <div style="margin-left:40px">
+ <ion-label>
+ <h4 style="padding-bottom:1px;color:#03a8a6">PERMANENT ADDRESS</h4>
+ <p style="padding-bottom:0px;margin-bottom:0px">University of Ottawa, Ottawa,Canada</p>
+  <p style="padding-bottom:5px;color:blue" (click)="editprofilemodal()">Edit</p>
+</ion-label>
+</div>
+
+ <div style="margin-left:40px">
+ <ion-label>
+ <h4 style="padding-bottom:1px;color:#03a8a6">MAILING ADDRESS </h4>
+ <p style="padding-bottom:0px;margin-bottom:0px">B J Medical College, Ahmedabad</p>
+  <p style="padding-bottom:5px;color:blue" (click)="editMailingModal()">Edit</p>
+</ion-label>
+
+</div>
+</ion-card>
+
+<ion-card class="container">
+ <ion-card>
+  <ion-item (click)="goToMedHistory()">
+       <ion-grid>
+        <ion-row class="ion-align-items-center">
+           <ion-col size="3">
+             <ion-button  fill="clear">
+               <ion-icon name="document"></ion-icon>
+             </ion-button>
+           </ion-col>
+           <ion-col size="7">
+             <ion-label>
+                <h4 style="color:#03a8a6"> Medical History </h4>
+             </ion-label>
+           </ion-col>
+        </ion-row>
+       </ion-grid>
+  </ion-item>
+
+</ion-card>
+<ion-card>
+  <ion-item (click)="goToShoppingHistory()">
+       <ion-grid>
+        <ion-row class="ion-align-items-center">
+           <ion-col size="3">
+             <ion-button  fill="clear">
+               <ion-icon name="document"></ion-icon>
+             </ion-button>
+           </ion-col>
+           <ion-col size="7">
+             <ion-label>
+                <h4 style="color:#03a8a6"> Shopping History </h4>
+             </ion-label>
+           </ion-col>
+        </ion-row>
+       </ion-grid>
+ </ion-item>
+</ion-card>
+
+
+<ion-card>
+   <ion-item (click)="showAlert()">
+       <ion-grid>
+        <ion-row class="ion-align-items-center">
+           <ion-col size="3">
+             <ion-button  fill="clear">
+               <ion-icon name="document"></ion-icon>
+             </ion-button>
+           </ion-col>
+           <ion-col size="7">
+             <ion-label>
+                <h4 style="color:#03a8a6"> Others </h4>
+             </ion-label>
+           </ion-col>
+        </ion-row>
+       </ion-grid>
+ </ion-item>
+</ion-card>
+
+</ion-card>
+</ion-content>

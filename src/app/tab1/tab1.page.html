@@ -1,17 +1,38 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <ion-content>
+
+<ion-grid style="border-radius: 10px 10px 10px 10px;">
+
+  <ion-row>
+
+   <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+   <div>
+    <div text-center>
+      
+    </div>   
+
+     <div padding style="padding-top:20px">
+      <ion-item>
+          <ion-input  name="fname" type="text" placeholder="Phone number / Email address"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input  name="Lname" type="text" placeholder="Password"></ion-input>
+      </ion-item>
+    </div>
+
+    <div padding style="padding-top:10px;">
+      <ion-button size="medium" href="/touchid" expand="block">Login </ion-button>
+    </div>
+    <div padding style="padding-top:10px;">
+
+      <p (click)="forgotPassword" style="font-size:16px;display:inline">Forgot password | </p>
+       <h4 (click)="gotoRegister()" style="font-size:17px;color:blue;display:inline"> Create new account </h4>
+    </div>  
+
+  </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
 </ion-content>

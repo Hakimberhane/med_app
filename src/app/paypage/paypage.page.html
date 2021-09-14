@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode=ios class="new-background-color">
+ 
+    <ion-title>
+      Pay
+    </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/" color="light"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+<ion-card>
+ <ion-card-header>
+         <ion-label class="label-background-color">
+           <h1> There are 3 itmes in you cart.</h1>
+           <h2> Total price is $234.00</h2>
+
+         </ion-label>
+
+  </ion-card-header>
+    <ion-list>
+      <ion-label style="margin-left:12px">  Choose Payment Method:</ion-label>
+
+     <ion-item>
+
+<div>
+           <ion-checkbox class="checkbox-top" checked style="background-color:red"></ion-checkbox>
+</div>
+        <ion-label class="checkbox-label" >
+
+            <div>
+            <h2> Pay cash at delivery</h2>
+            <p> Bole Edanamole behind</p>
+            <p>Phone:<span>0940200240</span></p>
+            <p style="color:blue" >Change Deliver Address</p>
+           </div>
+        </ion-label>
+
+
+    </ion-item> 
+    <ion-button [routerLink]="['/paypage']">Cancel</ion-button>
+    <ion-button (click)="showAlert()">Order</ion-button>
+
+      </ion-list>
+
+</ion-card>
+
+</ion-content>

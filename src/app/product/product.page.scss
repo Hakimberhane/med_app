@@ -1,0 +1,52 @@
+.new-background-color{
+     color:white;
+    --background: #54d61c;
+}
+
+ion-toolbar{
+  --min-height:55px!important;
+}
+
+.ion-container {
+	
+	display:flex;
+	justify-content: flex-start;
+}
+
+.name-label {
+
+    font-size:16px;
+    color:black;
+}
+
+.qtyinput {
+    text-align: center;
+}
+
+ion-col{
+   ion-input{
+      border: solid 1px gray;
+      position: relative;
+      width:80px;
+      height:42px;
+      	 padding-bottom:0px;
+
+   }
+}
+ion-button {
+	 height:42px;
+	 padding-top:0px;
+	 margin-top:0px;
+     font-weight: 700;
+}
+
+.ion-input-label {
+	 border: solid 1px black;
+	 height:42px;
+}
+
+.div-qty {
+  
+    display: inline-flex;
+    vertical-align: top; /* here */
+}

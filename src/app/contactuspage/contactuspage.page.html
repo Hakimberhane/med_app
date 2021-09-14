@@ -1,0 +1,93 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode=ios class="new-background-color">
+ 
+    <ion-title>
+      Contact Us
+    </ion-title>
+
+ <!-- Side menu button -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false" class="my-side-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="cart-btn">
+       <ion-icon size="large" name="cart-outline"></ion-icon>
+       <ion-badge class="cart-badge"color="primary">11</ion-badge> 
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+ <ion-card>
+  
+ <ion-item lines="none">
+    <ion-icon name="phone-portrait-outline" color="primary"></ion-icon>  
+    <ion-label class="label-pos">
+      <h3>Give us a call</h3>
+      <P>0940290940
+    </ion-label>
+ </ion-item>
+ <ion-item lines="none">
+    <ion-icon name="mail-outline" color="primary" class="mail-custom"></ion-icon>
+    <ion-label class="label-pos">
+        <h3>Drop us an email</h3>
+        <P>hakimberhane@gmail.com<p>
+    </ion-label>
+ </ion-item>
+  <ion-item lines="none">
+  <ion-icon name="location-outline" color="primary" class="mail-custom"></ion-icon>
+    <ion-label class="label-pos">
+        <h3>Visit our location</h3>
+        <P>Bole road, higher 7<p>
+    </ion-label>
+ </ion-item>
+
+  <form  #form="ngForm" (ngSubmit)="register(form)">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3>Send us a message</h3>
+          </div>
+          <div padding>
+            <ion-item lines="none">
+               <ion-input  name="Fname" type="text" placeholder="First Name" ngModel required></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-input  name="Lname" type="text" placeholder="Last Name" ngModel required></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-input name="email" type="email" placeholder="Email Address" ngModel required></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-input name="phone" type="phone" placeholder="Phone No (required)" ngModel required></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+
+              <Ion-textarea  rows="8" placeholder="Enter any notes here..."></Ion-textarea>
+
+            </ion-item>
+      
+          </div>
+          <div padding>
+            <ion-button class="button-div" type="submit" [disabled]="form.invalid" expand="block" [routerLink]="['/detail']">SEND MESSAGE</ion-button>
+          </div>
+
+        </ion-col>
+
+      </ion-row>
+
+    </ion-grid>
+  </form>
+
+
+
+
+</ion-card>
+
+
+
+
+</ion-content>
+

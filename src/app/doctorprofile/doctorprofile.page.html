@@ -1,0 +1,85 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode=ios class="new-background-color">
+ 
+    <ion-title>
+      Profile
+    </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/" color="light"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card>
+
+
+ <ion-item lines="none" ion-text-center> 
+
+   <ion-label>
+     <div style="display:flex; justify-content:center">
+	     <ion-avatar slot="start" class="avator-position">
+	       <img src="assets/icon/person1.jpg">
+	     </ion-avatar>
+     </div>
+    <div style="display:flex; justify-content:center">
+    <ion-label>
+      <h3>Dr. {{doctor.firstName}} {{doctor.lastName}} </h3>
+      <h3 style="color:lightgrey">{{doctor.speciality}}</h3>
+     </ion-label>
+     </div>
+    <div style="display:flex; justify-content:center">
+      <ion-button  [disabled]="!doctor.isAvailable">Call</ion-button>
+      <ion-button  [disabled]="!doctor.isAvailable">Text</ion-button>
+      <ion-button> Book </ion-button> 
+     </div>
+   </ion-label>
+  </ion-item>
+
+ <h3 style="color:#03a8a6">Background </h3>
+
+  <p style="padding:0px;margin:0px;line-height:1.6875rem">
+Dr Yang graduated from the National University of Singapore, with 7 years of experience as a practising doctor. He has a strong experience in surgical disciplines, handling cases ranging from the outpatient setting to emergency procedures. He has worked full time in a primary care setting since 2018 and is comfortable with managing both acute and chronic conditions.
+  </p>
+</ion-card>
+
+<ion-card>
+
+<ion-label>
+ <h2 style="padding-bottom:0px; margin:0px;color:#03a8a6">SPECIALITIES </h2>
+   <p style="padding:0px;margin-bottom:8px;padding-left:5px">Internal Medicine</p>
+</ion-label>
+<ion-label>
+ <h2 style="padding-bottom:2px;color:#03a8a6">EXPERIENCE </h2>
+ <p style="padding-bottom:0px;margin-bottom:0px;padding-left:5px">9+ Yrs </p>
+</ion-label>
+
+</ion-card>
+ <h4 style="padding-left:10px;color:#03a8a6"> Academics & Trainings </h4>
+<ion-card>
+
+
+    <img style="height:30px; width:30px;display:flex;position:absolute" src="assets/icon/diploma1.jpg">
+ <div style="margin-left:40px">
+ <ion-label>
+ <h4 style="padding-bottom:1px;color:black">MASTER OF SURGERY OBSTETRIS </h4>
+ <p style="padding-bottom:0px;margin-bottom:0px;padding-left:4px">University of Ottawa, Ottawa,Canada</p>
+  <p style="padding-bottom:5px;padding-left:4px">2018</p>
+</ion-label>
+</div>
+
+  <img style="height:30px; width:30px;display:flex;position:absolute" src="assets/icon/diploma1.jpg">
+ <div style="margin-left:40px">
+ <ion-label>
+ <h4 style="padding-bottom:1px;color:black">MD MEDICINE </h4>
+ <p style="padding-bottom:0px;margin-bottom:0px;padding-left:4px">B J Medical College, Ahmedabad</p>
+  <p style="padding-bottom:5px;padding-left:4px">2019</p>
+</ion-label>
+
+</div>
+</ion-card>
+
+</ion-content>

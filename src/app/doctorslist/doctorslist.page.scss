@@ -1,0 +1,44 @@
+ion-content{
+    --ion-background-color:#f8f9fa;
+}
+
+.new-background-color{
+     color:white;
+    --background: #54d61c;
+}
+ 
+ion-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-bottom:50px;
+  color:white;
+}
+
+ion-toolbar{
+  --min-height:105px!important;
+}
+
+
+h3 {
+  font-weight:700;
+  font-size:14px;
+  color:#000039;
+}
+
+.ion-content-backg {
+	
+	--background:#fff url(/assets/icon/pharmacy-backg.jpg) 0 0/100% 100% no-repeat;
+}
+
+.avator-position  {
+    margin-top:-8px;
+}
+
+ion-list,ion-item{ 
+ 	background:white;
+ 	--background:white;
+}

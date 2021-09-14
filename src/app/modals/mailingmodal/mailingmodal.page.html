@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="color:green">Edit Shipping Address</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()" style="color:blue;font-weight:500">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content>
+<ion-card style="border-radius: 10px 10px 10px 10px;">
+
+
+  <form  #form="ngForm" (ngSubmit)="register(form)">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+        
+          <div padding>
+    
+            <ion-item>
+              <ion-input name="email" type="Address" placeholder="Address" ngModel required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input name="city" type="text" placeholder="City" ngModel required></ion-input>
+            </ion-item>
+
+			<ion-item detail="false">
+			        <ion-label color="medium">Region:</ion-label>
+				        <ion-select class="ion-text-end" name="region">
+				            <ion-select-option value="1">Oromia</ion-select-option>
+				            <ion-select-option value="2">Amhara</ion-select-option>
+				            <ion-select-option value="2">Somalia</ion-select-option>
+				            <ion-select-option value="2">Tigrai</ion-select-option>
+				            <ion-select-option value="2">Souther Region</ion-select-option>
+				            <ion-select-option value="2">Afar</ion-select-option>
+				            <ion-select-option value="2">Gambella</ion-select-option>
+				            <ion-select-option value="2">Beneshangul</ion-select-option>
+				            <ion-select-option value="2">Harari</ion-select-option>
+				            <ion-select-option value="2">Sidama</ion-select-option>
+				        </ion-select>
+			 </ion-item>
+     
+          </div>
+          <div padding>
+            <ion-button slot="center" class="editbutton"  size="large" type="submit" [disabled]="form.invalid" expand="block" [routerLink]="['/detail']">Save</ion-button>
+          </div>
+
+        </ion-col>
+
+      </ion-row>
+
+    </ion-grid>
+  </form>
+
+
+
+
+</ion-card>
+
+
+
+
+</ion-content>
+

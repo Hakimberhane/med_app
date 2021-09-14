@@ -1,0 +1,44 @@
+<ion-header style="background-color:#54d61c">
+  <ion-navbar mode=ios>
+ 
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/" color="light"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>
+      Doctors List
+    </ion-title>
+
+    <ion-searchbar class="searchbar-ios searchbar-input"
+color="light"
+[(ngModel)]="myInput"
+[showCancelButton]="never"
+(ionCancel)="onCancel($event)" (search)="searchByKeyword($event)">
+</ion-searchbar>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card>
+ <ion-list *ngFor="let doctor of doctors" detail="false" no-padding lines="none" style="border-bottom: 1px solid lightgray;">
+
+ <ion-item lines="none" detail="true"> 
+   <ion-avatar slot="start" class="avator-position">
+    <img src="assets/icon/person1.jpg">
+   </ion-avatar>
+   <ion-label>
+     <div (click)='goToDoctorProfile(doctor)'>
+      <h3>Dr. {{doctor.firstName}} {{doctor.lastName}} </h3>
+      <p style="color:grey">{{doctor.speciality}}</p>
+      <p [hidden] ="!doctor.isAvailable" style="color:green">Available Now</p>
+      <p [hidden] ="doctor.isAvailable" style="color:lightgrey">Not Available Now</p>
+      
+     </div>
+   </ion-label>
+  </ion-item>
+
+</ion-list>
+</ion-card>
+</ion-content>

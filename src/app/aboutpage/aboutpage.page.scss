@@ -1,0 +1,45 @@
+
+ion-content {
+  --ion-background-color:white;
+}
+
+
+ion-item{ --border-color: #F00; }
+.nomargin{
+    --ion-background-color:lightgrey;
+
+    top: 0px !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    right: 0px !important;
+    margin: 0px !important;
+    width: 100% !important;
+}
+ion-item{
+   --border-color: rgb(48, 66, 94);
+}
+
+ion-card {
+    margin-right:20px;
+        margin-left:20px;
+      --ion-background-color:#eeeeee;
+
+}
+
+.new-background-color{
+     color:white;
+    --background: #54d61c;
+}
+
+ion-toolbar{
+  --min-height:55px!important;
+}
+
+ion-menu-buttons{
+  --color:white !important;
+   color:white !important;
+}
+
+.profile-side-menu{
+  --color:green;
+}

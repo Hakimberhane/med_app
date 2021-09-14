@@ -1,0 +1,24 @@
+.new-background-color{
+     color:white;
+    --background: #54d61c;
+}
+
+ion-toolbar{
+  --min-height:55px!important;
+}
+
+.background-image{
+    --background: url(/assets/icon/pharmacy-backg.jpg) 0 0/100% 100% no-repeat;
+}
+
+ion-card{
+    height: 220px;
+}
+.ion-card-option{
+    height: 60px;
+}
+
+.option-lable {
+  display: flex;
+  justify-content: center;
+}

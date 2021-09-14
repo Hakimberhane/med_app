@@ -13,5 +13,42 @@
     </ion-toolbar>
   </ion-header>
 
+    <ion-item>
+        <ion-label>Todo</ion-label>
+        <ion-input type="text" formControlName="title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Description</ion-label>
+        <ion-textarea formControlName="description"></ion-textarea>
+      </ion-item>
+hi
   <app-explore-container name="Tab 2 page"></app-explore-container>
 </ion-content>
+
+
+
+
+
+<ion-app>  
+   <ion-menu side="end" menuId="first" contentId="content"> 
+      <ion-header>
+          <ion-toolbar>
+            <ion-title>Navigate</ion-title>
+          </ion-toolbar>
+      </ion-header>
+
+       <ion-content color="light">  
+          <ion-list *ngFor="let pages of navigate">  
+             <ion-menu-toggle autoHide="false">
+               <ion-item class="ion-no-padding" [routerLink]="pages.url"> 
+                  <ion-img style="width:40px; height:40px" src={{pages.icon}}></ion-img>
+              <ion-label>
+                    {{pages.title}}   
+              </ion-label>
+               </ion-item>
+              </ion-menu-toggle>
+          </ion-list>
+       </ion-content>   
+     </ion-menu>  
+     <ion-router-outlet Id="content"></ion-router-outlet>  
+   </ion-app>   

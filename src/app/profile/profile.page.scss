@@ -1,0 +1,52 @@
+
+.new-background-color{
+     color:white;
+    --background: #54d61c;
+}
+
+ion-toolbar{
+  --min-height:55px!important;
+}
+
+.back-button-md,
+.back-button-ios {
+  color: red;
+}
+
+.label-background-color{
+    --background: #54d61c;
+
+}
+
+.med-name-label {
+  font-size: 1em;
+}
+
+.manufacturing-label {	
+  font-size: 1em;
+  color:red;
+}
+
+.item-input-inset{
+  flex-flow: column;
+  align-items: stretch;
+}
+.div-center {
+	width:40%;
+	display:block;
+	margin:0 auto;
+}
+.cart-btn {
+   position: relative;
+   color:black;
+   right:20px;
+}
+
+.cart-badge {
+   background-color: red;
+   position: absolute;
+   top: 8px;
+   right:-15px;
+   border-radius: 100%;
+
+}

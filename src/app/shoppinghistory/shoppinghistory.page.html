@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button  defaultHref="/" color="green"></ion-back-button>
+      </ion-buttons>
+        <ion-title style="color:green">Shopping History</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+ <ion-list detail="false" no-padding style="border-bottom: 1px solid lightgray;">
+
+ <ion-item  detail="true"> 
+   <ion-label>
+     <div (click)='goToDoctorProfile(doctor)'>
+      <h3 style="font-weight:bold">Oct 06,2019</h3>
+      <p style="color:grey;margin-left:2px">bought 9 items</p>
+     </div>
+   </ion-label>
+  </ion-item>
+
+
+   <ion-item  detail="true"> 
+   <ion-label>
+     <div (click)='goToDoctorProfile(doctor)'>
+      <h3 style="font-weight:bold">Sep 15,2019</h3>
+      <p style="color:grey;margin-left:2px">ordered  2 items</p>
+     </div>
+   </ion-label>
+  </ion-item>
+
+</ion-list>
+
+</ion-content>

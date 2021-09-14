@@ -15,6 +15,8 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar
   ) {
+
+     this.sideMenu();  
     this.initializeApp();
   }
 
@@ -24,4 +26,55 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
+  sideMenu() {  
+
+ this.navigate =
+    [
+      {
+        title : "My Order",
+        url   : "/profile",
+        icon  : "home"
+      },
+      {
+        title : "Pharmacy",
+        url   : "/pharmacy",
+        icon  : "chatboxes"
+      },
+      {
+        title : "Other Products",
+        url   : "/otherproductspage",
+        icon  : "contacts"
+      },
+      {
+         title : "See a Doctor",
+        url   : "/doctorslist",
+        icon  : "home"
+      },
+      {
+        title : "My Account",
+        url   : "/addresspage",
+        icon  : "chatboxes"
+      },
+      {
+        title : "Contact Us",
+        url   : "/contactuspage",
+        icon  : "contacts"
+      },
+      {
+        title : "FAQs",
+        url   : "/faqspage",
+        icon  : "contacts"
+      },
+
+
+
+
+    ]
+        
+  }
+
+
+
 }
+

@@ -1,0 +1,138 @@
+ion-content{
+    --ion-background-color:#f0f4f8;
+}
+
+
+ion-input{
+      border: solid 1px lightgrey;
+   }
+
+ion-textarea {
+	      border: solid 1px lightgrey;
+}
+ion-item{ --border-color: #F00; }
+.nomargin{
+    --ion-background-color:lightgrey;
+
+    top: 0px !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    right: 0px !important;
+    margin: 0px !important;
+    width: 100% !important;
+}
+ion-item{
+   --border-color: rgb(48, 66, 94);
+    --ion-background-color:white;
+
+}
+ion-col {
+      --ion-background-color:red;
+
+}
+
+ion-card {
+    margin-right:20px;
+    margin-left:20px;
+  --ion-background-color:white;
+
+}
+
+.new-background-color{
+     color:white;
+    --background: #54d61c;
+}
+
+ion-toolbar{
+  --min-height:55px!important;
+}
+
+ion-menu-buttons{
+  --color:white !important;
+   color:white !important;
+}
+ion-button {	
+  --width: 60px;
+  --height: 60px;
+}
+
+.footerAddress a {
+    font-size: 16px;
+    line-height: 19px;
+    color: #6BC048;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.snippetText h2 {
+    font-size: 20px;
+    line-height: 125%;
+    color: #F31D78;
+    margin-bottom: 0;
+    margin-left:10px;
+}
+
+ion-lable {
+	background-color:yellow;
+}
+
+a {
+   	font-size:16px;
+    color: #3ac500;
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+}
+
+.button-div {
+	width:94%;
+	display:block;
+	margin:0 auto;
+
+}
+
+h3 {
+  
+  font-size:17px;
+  color:#000;
+  letter-spacing:.3px;
+  font-family:'poppins,sans-serif;'
+}
+
+.custom-icon {
+  background-color:red;
+  position:absolute;
+  font-size:30px;
+  vertical-align: middle;
+}
+
+ion-icon {
+  font-size: 30px;
+  --ionicon-stroke-width: 30px;
+  --margin-left:100pz;
+}
+
+.mail-custom  {
+      margin-top:-20px;
+      margin-left:5px;
+}
+
+.label-pos {
+  margin-left:10px;
+}
+
+.cart-btn {
+   position: relative;
+   color:black;
+   right:20px;
+}
+
+.cart-badge {
+   background-color: red;
+   position: absolute;
+   top: 8px;
+   right:-15px;
+   border-radius: 100%;
+
+}

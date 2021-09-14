@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode=ios class="new-background-color">
+ 
+    <ion-title>
+      My Cart
+    </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/" color="light"></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end" class="cart-btn">
+          <ion-icon size="large" name="cart-outline"></ion-icon>
+          <ion-badge class="cart-badge"color="primary">{{numberOfProducts}}</ion-badge> 
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+<ion-card>
+  <ion-card-header>
+    Please Review
+  </ion-card-header>
+
+  <ion-list>
+    <ion-item button detail=true *ngFor="let product of products">
+        <ion-img style="width:40px; height:40px" src="assets/icon/md-pill.png"></ion-img>
+        <ion-label>
+        <div (click)='goToProductPage(product)'>
+            <h2>{{product.name}}</h2>
+            <p>{{product.description}}</p>
+            <p>Qty:{{product.quantity}} packs</p>
+        </div>     
+            <p style="color:blue" (click)="remove(product)" >Remove</p>
+
+   
+        </ion-label>
+
+         <ion-label class="label-background-color" style="text-align: right; color:red">${{product.price * product.quantity}}</ion-label>
+    </ion-item> 
+
+ 
+  </ion-list>
+
+  <ion-item button>
+        <ion-label>
+            <h2>Total</h2>
+       
+        </ion-label>
+        <ion-label class="label-background-color" style="text-align: right; color:red">${{total}}</ion-label>
+
+    </ion-item>
+
+</ion-card>
+     <div class="div-center">
+                <ion-button [routerLink]="['/pharmacy']">Add More</ion-button>
+                <ion-button [routerLink]="['/paypage']">Pay</ion-button>
+
+    </div>
+
+
+</ion-content>
+
+
+

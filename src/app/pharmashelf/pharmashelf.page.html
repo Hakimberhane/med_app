@@ -1,0 +1,112 @@
+<ion-header style="background-color:#54d61c">
+  <ion-navbar mode=ios>
+ 
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/" color="light"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>
+      Generic Medicines Shelf
+    </ion-title>
+
+    <ion-searchbar class="searchbar-ios searchbar-input"
+color="light"
+[(ngModel)]="myInput"
+[showCancelButton]="never"
+(ionCancel)="onCancel($event)" (search)="searchByKeyword($event)">
+</ion-searchbar>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+<ion-list>
+
+<ion-item>
+<ion-card>
+  <ion-card-header color="primary">
+    Popular Products
+  </ion-card-header>
+ <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let product of popularProducts">
+      <div (click)='goToProductPage(product)'>
+        <ion-card class="item-card">
+          <ion-img src={{product.url}} ></ion-img>
+        </ion-card>
+        <ion-label style="margin-left:10px"> {{product.name}}</ion-label>
+      </div>
+     </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
+</ion-item>
+
+
+<ion-item>
+<ion-card>
+  <ion-card-header color="primary">
+    Seasonal Products
+  </ion-card-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let product of seasonalProducts">
+      <div (click)='goToProductPage(product)'>
+        <ion-card class="item-card">
+          <ion-img src={{product.url}} ></ion-img>
+        </ion-card>
+        <ion-label style="margin-left:10px"> {{product.name}}</ion-label>
+      </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
+</ion-item>
+
+<ion-item>
+<ion-card>
+  <ion-card-header color="primary">
+    Top Selling Products
+  </ion-card-header>
+  <ion-grid>
+     <ion-row>
+      <ion-col *ngFor="let product of topProducts">
+      <div (click)='goToProductPage(product)'>
+        <ion-card class="item-card">
+          <ion-img src={{product.url}} ></ion-img>
+        </ion-card>
+        <ion-label style="margin-left:10px"> {{product.name}}</ion-label>
+      </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
+</ion-item>
+
+
+<ion-item>
+<ion-card>
+  <ion-card-header color="primary">
+    Explore Nearby
+  </ion-card-header>
+  <ion-grid>
+     <ion-row>
+      <ion-col *ngFor="let product of otherProducts">
+      <div (click)='goToProductPage(product)'>
+        <ion-card class="item-card">
+          <ion-img src={{product.url}} ></ion-img>
+        </ion-card>
+        <ion-label style="margin-left:10px"> {{product.name}}</ion-label>
+     </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
+</ion-item>
+
+
+</ion-list>
+
+</ion-content>
